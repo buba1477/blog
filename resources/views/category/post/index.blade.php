@@ -19,12 +19,9 @@
                                         @csrf
                                         <span>{{$post->likes_users_count}}</span>
                                         <button type="submit" class="border-0 bg-transparent">
-                                            {{--                                            @if(auth()->user()->likesPosts->contains($post->id))--}}
-                                            <i class="fa{{auth()->user()->likesPosts->contains($post->id) ? 's' :'r'}} fa-heart"></i>
-                                            {{--                                            @else--}}
-                                            {{--                                                <i class="far fa-heart"></i>--}}
-                                            {{--                                            @endif--}}
 
+                                            <i class="fa{{auth()->user()->likesPosts->contains($post->id) ? 's' :'r'}} fa-heart"></i>
+                                            
                                         </button>
                                     </form>
                                 @endauth
